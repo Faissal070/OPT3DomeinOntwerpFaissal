@@ -1,13 +1,19 @@
 import java.time.LocalTime;
 import java.util.Scanner;
 
-public class Inloggen {
+public class Inloggen extends UrenRegistratie {
     private static LocalTime time;
     Werkkracht medewerker;
 
-    public LocalTime Inklokken() {
-        Menu menu = new Menu();
-        medewerker = new Medewerker("Check",9383,8.10,928272,929282);
+
+    public static LocalTime getTime() {
+        return time;
+    }
+
+    @Override
+    public LocalTime Kloksysteem() {
+        Gegevens gegevens = new Gegevens(982792,192922);
+        medewerker = new Medewerker("Check", 9383, 9.20, gegevens);
         Scanner scanner = new Scanner(System.in);
         System.out.println("Naam werknemer");
         String naam = scanner.nextLine();
@@ -20,21 +26,16 @@ public class Inloggen {
                 System.out.println("Je dienst is succesvol gestart. Werkze!");
                 time = LocalTime.now();
                 System.out.println(time);
-                menu.menu();
-                return time;
+                Menu.getInstance().menu();
 
             }
+
         }
         if (!check) {
             System.out.println("Sorry probeer het opnieuw je wordt vanzelf doorgestuurd naar de menu");
-            menu.menu();
+            Menu.getInstance().menu();
 
         }
-
         return time;
     }
-    public static LocalTime getTime(){
-        return time;
-    }
-
 }

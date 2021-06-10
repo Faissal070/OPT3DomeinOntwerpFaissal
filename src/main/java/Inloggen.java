@@ -12,7 +12,8 @@ public class Inloggen extends UrenRegistratie {
 
     @Override
     public LocalTime Kloksysteem() {
-        medewerker = new Medewerker("Check", 9383, 8.10, 928272, 929282);
+        Gegevens gegevens = new Gegevens(982792,192922);
+        medewerker = new Medewerker("Check", 9383, 9.20, gegevens);
         Scanner scanner = new Scanner(System.in);
         System.out.println("Naam werknemer");
         String naam = scanner.nextLine();

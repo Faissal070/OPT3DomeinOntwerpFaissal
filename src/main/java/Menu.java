@@ -13,7 +13,8 @@ public class Menu {
     public void menu() {
         Scanner scanner = new Scanner(System.in);
         Salaris oproepen = new Salaris();
-        Medewerker oproepen1 = new Medewerker("Lisa", 8222,9.20,98272972,18282);
+        Gegevens gegevens = new Gegevens(922982,2982792);
+        Medewerker oproepen1 = new Medewerker("Lisa", 8222,20.50,gegevens);
         Uitloggen oproepen2 = new Uitloggen();
         Inloggen oproepen3 = new Inloggen();
         System.out.println("Goedendag, kies uit 1/2/3 of 4");

@@ -11,7 +11,8 @@ public class Uitloggen {
     public LocalTime Kloksysteem() {
         Scanner scanner = new Scanner(System.in);
         Salaris obj = new Salaris();
-        medewerker = new Werkkracht("Lisa", 8765, 7.60, 876754325, 678654365);
+        Gegevens gegevens = new Gegevens(922220,9276227);
+        medewerker = new Werkkracht("Lisa", 8765, 10.50, gegevens);
         System.out.println("Wat is je naam");
         String naam = scanner.nextLine();
         System.out.println("Wat is je code?");

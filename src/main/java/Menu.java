@@ -1,6 +1,14 @@
 import java.util.Scanner;
 
 public class Menu {
+    private static Menu instance = new Menu();
+
+    private Menu(){}
+
+    public static Menu getInstance() {
+        return instance;
+    }
+
 
     public void menu() {
         Scanner scanner = new Scanner(System.in);
@@ -21,12 +29,12 @@ public class Menu {
         int antwoord = scanner.nextInt();
 
         if (antwoord == 1) {
-            oproepen3.Inklokken();
+            oproepen3.Kloksysteem();
 
 
         }
         if (antwoord == 2) {
-            oproepen2.Uitklokken();
+            oproepen2.Kloksysteem();
 
         }
        if (antwoord == 3) {

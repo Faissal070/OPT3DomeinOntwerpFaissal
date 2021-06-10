@@ -14,7 +14,6 @@ public class Medewerker extends Werkkracht {
     public void werknemerToevoegen() {
         Scanner scanner = new Scanner(System.in);
         //ToevoegingMedewerker();
-        Menu menu = new Menu();
         System.out.println("Goedendag wat is u naam?");
         String naam = scanner.nextLine();
         System.out.println("Voer u code in");
@@ -37,7 +36,7 @@ public class Medewerker extends Werkkracht {
                 nieuweMedewerker = new Werkkracht(naam1, getNewCode(), uurloon, bsn, telefoonnummer);
                 medewerker.add(new Werkkracht(naam1, getNewCode(), uurloon, bsn, telefoonnummer));
                 System.out.println("Medewerker succesvol toegevoegd " + medewerker);
-                menu.menu();
+                Menu.getInstance().menu();
             }
             if(!check){
                 System.out.println("Sorry je staat niet in ons systeem. Je wordt doorgestuurd naar de menu");

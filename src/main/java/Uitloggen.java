@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 public class Uitloggen {
     private LocalTime time2;
-    Werkkracht medewerker;
+
 
     public LocalTime Kloksysteem(String naam, int code) {
         boolean check = false;
@@ -36,7 +36,7 @@ public class Uitloggen {
         Scanner scanner = new Scanner(System.in);
         Salaris obj = new Salaris();
         Gegevens gegevens = new Gegevens(922220,9276227);
-        medewerker = new Werkkracht("Lisa", 8765, 10.50, gegevens);
+        Medewerker medewerker = new Medewerker("Lisa", 8765, 10.50, gegevens);
         System.out.println("Wat is je naam");
         String naam = scanner.nextLine();
         System.out.println("Wat is je code?");
@@ -51,9 +51,9 @@ public class Uitloggen {
         Inloggen obj = new Inloggen();
         long minutesBetween = ChronoUnit.SECONDS.between(Inloggen.getTime(), time2);
         System.out.println("Diffrence between time in munutes : " + minutesBetween);
-        //minminutesBetween / 3600;
-        //        System.out.println(minutesBetween);utesBetween =
+
 
         return minutesBetween;
     }
+
 }

@@ -2,8 +2,8 @@ import java.time.LocalTime;
 import java.util.Scanner;
 
 public class Inloggen extends UrenRegistratie {
+    Scanner scanner = new Scanner(System.in);
     private static LocalTime time;
-    Werkkracht medewerker;
 
 
     public static LocalTime getTime() {
@@ -31,20 +31,19 @@ public class Inloggen extends UrenRegistratie {
         return time;
     }
 
-    public void checkwerknemer() {
-        Scanner scanner = new Scanner(System.in);
+    public void checkwerknemerVoorSalaris() {
         Gegevens gegevens = new Gegevens(78939390, 838383);
-        Werkkracht werknemer = new Werkkracht("Fais", 9833, 9.30, gegevens);
+        Werkkracht werknemer3 = new Werkkracht("Fais", 9833, 9.30, gegevens);
         System.out.println("Goedendag, wat is je naam werknemer");
-        String naam = scanner.nextLine();
+        scanner.nextLine();
+        String naamwerknemer2 = scanner.nextLine();
         System.out.println("Voer je code in");
-        int code = scanner.nextInt();
-        Salaris.BerekenSalaris(naam, code);
+        int codewerknemer2 = scanner.nextInt();
+        Salaris.BerekenSalaris(naamwerknemer2, codewerknemer2);
     }
     public void checkWerknemerInklokken(){
-        Scanner scanner = new Scanner(System.in);
-        Gegevens gegevens = new Gegevens(78939390, 838383);
-        Werkkracht werknemer = new Werkkracht("Fais", 9833, 9.30, gegevens);
+        Gegevens gegevens = new Gegevens(8927292, 1265252);
+        Werkkracht werknemer = new Werkkracht("Lisa", 9087, 15.50, gegevens);
         System.out.println("Naam werknemer");
         String naam = scanner.nextLine();
         System.out.println("Code werknemer");

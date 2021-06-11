@@ -30,7 +30,7 @@ public class Menu {
             oproepen1.InloggenWerkgever();
         }
         if (antwoord == 4){
-            oproepen3.checkwerknemer();
+            oproepen3.checkwerknemerVoorSalaris();
         }
     }
 

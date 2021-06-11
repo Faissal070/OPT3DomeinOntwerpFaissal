@@ -13,7 +13,6 @@ public class Salaris {
     public Double getToeslag(){
         return this.Toeslag;
     }
-    Werkkracht werknemer;
 
     public static void BerekenSalaris(String naam, int code){
         boolean check = false;

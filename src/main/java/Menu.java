@@ -39,7 +39,7 @@ public class Menu {
 
         }
        if (antwoord == 3) {
-            oproepen1.werknemerToevoegen();
+            oproepen1.InloggenWerkgever();
 
         }
         if (antwoord == 4){

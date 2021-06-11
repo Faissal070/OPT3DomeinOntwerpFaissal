@@ -4,8 +4,8 @@ import java.time.temporal.ChronoUnit;
 import java.util.Scanner;
 
 public class Salaris {
-    private Double belastingLoon = 0.88;
-    private Double Toeslag = 0.90;
+    private static Double belastingLoon = 0.88;
+    private static Double Toeslag = 0.90;
 
     public Double getBelastingLoon(){
         return this.belastingLoon;
@@ -15,21 +15,14 @@ public class Salaris {
     }
     Werkkracht werknemer;
 
-    public void BerekenSalaris() {
-        Scanner scanner = new Scanner(System.in);
-        Gegevens gegevens = new Gegevens(78939390,838383);
-        werknemer =  new Werkkracht("Fais", 9833, 9.30, gegevens);
-        System.out.println("Naam werknemer");
-        String naam = scanner.nextLine();
-        System.out.println("Code werknemer");
-        int code = scanner.nextInt();
+    public static void BerekenSalaris(String naam, int code){
         boolean check = false;
         for (Werkkracht i : Medewerker.medewerker) {
             if (i.getNaam().equals(naam) && code == i.getCode()) {
                 check = true;
                 System.out.println("Welkom");
                 Double berekeningSalaris = i.getTijdSeconde() * i.getUurloon()*belastingLoon*Toeslag;
-                DecimalFormat df = new DecimalFormat("#.###");
+                DecimalFormat df = new DecimalFormat("#.##");
                 System.out.println("Jouw netto salaris tot nu toe bedraagt " + df.format(berekeningSalaris) + " euro");
                 Menu.getInstance().menu();
 

@@ -43,9 +43,10 @@ public class Menu {
 
         }
         if (antwoord == 4){
-            oproepen.BerekenSalaris();
+            oproepen3.checkwerknemer();
 
 
         }
+
+        }
     }
-}

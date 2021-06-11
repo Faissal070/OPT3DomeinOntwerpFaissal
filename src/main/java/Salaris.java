@@ -30,8 +30,9 @@ public class Salaris {
             }
         }
             if (!check) {
-                System.out.println("Sorry je gegevens kloppen niet. Je wordt automatisch doorgestuurd naar de menu");
-                Menu.getInstance().menu();
+                Inloggen inloggen = new Inloggen();
+                inloggen.Nietgelijkaan();
+
 
 
             }

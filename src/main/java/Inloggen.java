@@ -25,8 +25,7 @@ public class Inloggen extends UrenRegistratie {
 
         }
         if (!check) {
-            System.out.println("Sorry probeer het opnieuw je wordt vanzelf doorgestuurd naar de menu");
-            Menu.getInstance().menu();
+            Nietgelijkaan();
 
         }
         return time;
@@ -51,6 +50,11 @@ public class Inloggen extends UrenRegistratie {
         System.out.println("Code werknemer");
         int code = scanner.nextInt();
         Kloksysteem(naam,code);
+
+    }
+    public void Nietgelijkaan(){
+        System.out.println("Sorry probeer het opnieuw je wordt vanzelf doorgestuurd naar de menu");
+        Menu.getInstance().menu();
 
     }
 }

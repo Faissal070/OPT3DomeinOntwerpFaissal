@@ -25,8 +25,8 @@ public class Uitloggen {
 
         }
         if (!check) {
-            System.out.println("Je staat niet in ons systeem. U word teruggestuurd naar de menu");
-            Menu.getInstance().menu();
+           Inloggen inloggen = new Inloggen();
+           inloggen.Nietgelijkaan();
 
 
         }

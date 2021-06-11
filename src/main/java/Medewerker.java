@@ -15,13 +15,8 @@ public class Medewerker extends Werkkracht {
 
 
 
-    public void werknemerToevoegen() {
+    public void werknemerToevoegen(String naam, int code) {
         Scanner scanner = new Scanner(System.in);
-        //ToevoegingMedewerker();
-        System.out.println("Goedendag wat is u naam?");
-        String naam = scanner.nextLine();
-        System.out.println("Voer u code in");
-        int code = scanner.nextInt();
         for (Werkkracht i : Werkgever.werkgevers) {
             boolean check = false;
             if (i.getNaam().equals(naam) && code == i.getCode()) {
@@ -47,5 +42,13 @@ public class Medewerker extends Werkkracht {
                 System.out.println("Sorry je staat niet in ons systeem. Je wordt doorgestuurd naar de menu");
             }
         }
+    }
+    public void InloggenWerkgever(){
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Goedendag wat is u naam?");
+        String naam = scanner.nextLine();
+        System.out.println("Voer u code in");
+        int code = scanner.nextInt();
+        werknemerToevoegen(naam,code);
     }
 }

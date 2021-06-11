@@ -12,9 +12,9 @@ public class Inloggen extends UrenRegistratie {
 
     @Override
     public LocalTime Kloksysteem() {
-        Gegevens gegevens = new Gegevens(982792,192922);
-        medewerker = new Medewerker("Check", 9383, 9.20, gegevens);
         Scanner scanner = new Scanner(System.in);
+        Gegevens gegevens = new Gegevens(78939390, 838383);
+        Werkkracht werknemer = new Werkkracht("Fais", 9833, 9.30, gegevens);
         System.out.println("Naam werknemer");
         String naam = scanner.nextLine();
         System.out.println("Code werknemer");
@@ -37,5 +37,16 @@ public class Inloggen extends UrenRegistratie {
 
         }
         return time;
+    }
+
+    public void checkwerknemer() {
+        Scanner scanner = new Scanner(System.in);
+        Gegevens gegevens = new Gegevens(78939390, 838383);
+        Werkkracht werknemer = new Werkkracht("Fais", 9833, 9.30, gegevens);
+        System.out.println("Naam werknemer");
+        String naam = scanner.nextLine();
+        System.out.println("Code werknemer");
+        int code = scanner.nextInt();
+        Salaris.BerekenSalaris(naam, code);
     }
 }

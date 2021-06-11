@@ -23,7 +23,6 @@ public class Medewerker extends Werkkracht {
                 check = true;
                 System.out.println("Welkom");
                 System.out.println("Wat is de naam van de nieuwe werknemer");
-                scanner.nextLine();
                 String naam1 = scanner.nextLine();
                 System.out.println();
                 System.out.println("Voer zijn/haar bsn in");

@@ -8,15 +8,7 @@ public class Uitloggen {
     private LocalTime time2;
     Werkkracht medewerker;
 
-    public LocalTime Kloksysteem() {
-        Scanner scanner = new Scanner(System.in);
-        Salaris obj = new Salaris();
-        Gegevens gegevens = new Gegevens(922220,9276227);
-        medewerker = new Werkkracht("Lisa", 8765, 10.50, gegevens);
-        System.out.println("Wat is je naam");
-        String naam = scanner.nextLine();
-        System.out.println("Wat is je code?");
-        int code = scanner.nextInt();
+    public LocalTime Kloksysteem(String naam, int code) {
         boolean check = false;
         for (Werkkracht i : Medewerker.medewerker) {
             if (i.getNaam().equals(naam) && code == i.getCode()) {
@@ -40,6 +32,18 @@ public class Uitloggen {
         }
         return time2;
     }
+    public void checkWerknemerUitklokken(){
+        Scanner scanner = new Scanner(System.in);
+        Salaris obj = new Salaris();
+        Gegevens gegevens = new Gegevens(922220,9276227);
+        medewerker = new Werkkracht("Lisa", 8765, 10.50, gegevens);
+        System.out.println("Wat is je naam");
+        String naam = scanner.nextLine();
+        System.out.println("Wat is je code?");
+        int code = scanner.nextInt();
+        Kloksysteem(naam,code);
+    }
+
 
 
 

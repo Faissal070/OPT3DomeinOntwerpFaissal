@@ -30,12 +30,12 @@ public class Menu {
         int antwoord = scanner.nextInt();
 
         if (antwoord == 1) {
-            oproepen3.Kloksysteem();
+            oproepen3.checkWerknemerInklokken();
 
 
         }
         if (antwoord == 2) {
-            oproepen2.Kloksysteem();
+            oproepen2.checkWerknemerUitklokken();
 
         }
        if (antwoord == 3) {

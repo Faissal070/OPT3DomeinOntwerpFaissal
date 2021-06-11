@@ -18,23 +18,26 @@ public class Menu {
 
 
     public void menu() {
+        int antwoord = -1;
         menuTekst();
-        int antwoord = scanner.nextInt();
-        if (antwoord == 1) {
-            oproepen3.checkWerknemerInklokken();
-        }
-        if (antwoord == 2) {
-            oproepen2.checkWerknemerUitklokken();
-        }
-       if (antwoord == 3) {
-            oproepen1.InloggenWerkgever();
-        }
-        if (antwoord == 4){
-            oproepen3.checkwerknemerVoorSalaris();
+        antwoord = scanner.nextInt();
+        while (antwoord != 5) {
+            switch (antwoord) {
+                case 1:
+                    oproepen3.checkWerknemerInklokken();
+
+                case 2:
+                    oproepen2.checkWerknemerUitklokken();
+                case 3:
+                    oproepen1.InloggenWerkgever();
+                case 4:
+                oproepen3.checkwerknemerVoorSalaris();
+            }
         }
     }
 
-        public void menuTekst() {
+
+        public static void menuTekst() {
             System.out.println("Goedendag, kies uit 1/2/3 of 4\r\n\n");
             System.out.println("(1).Inklokken\r\n");
             System.out.println("(2).Uitklokken\r\n");

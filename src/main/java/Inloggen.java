@@ -13,8 +13,8 @@ public class Inloggen extends UrenRegistratie {
     @Override
     public LocalTime Kloksysteem(String naam, int code) {
         boolean check = false;
-        for (Werkkracht i : Medewerker.medewerker) {
-            if (i.getNaam().equals(naam) && code == i.getCode()) {
+        for (int i = 0; i<Medewerker.medewerker.size(); i++) {
+            if (Medewerker.medewerker.get(i).getNaam().equals(naam) && code == Medewerker.medewerker.get(i).getCode()) {
                 check = true;
                 System.out.println("Je dienst is succesvol gestart. Werkze!");
                 time = LocalTime.now();
@@ -45,6 +45,7 @@ public class Inloggen extends UrenRegistratie {
         Gegevens gegevens = new Gegevens(8927292, 1265252);
         Werkkracht werknemer = new Werkkracht("Lisa", 9087, 15.50, gegevens);
         System.out.println("Naam werknemer");
+        scanner.nextLine();
         String naam = scanner.nextLine();
         System.out.println("Code werknemer");
         int code = scanner.nextInt();

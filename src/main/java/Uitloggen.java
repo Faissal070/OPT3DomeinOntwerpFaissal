@@ -10,13 +10,13 @@ public class Uitloggen {
 
     public LocalTime Kloksysteem(String naam, int code) {
         boolean check = false;
-        for (Werkkracht i : Medewerker.medewerker) {
-            if (i.getNaam().equals(naam) && code == i.getCode()) {
+        for (int i = 0; i<Medewerker.medewerker.size(); i++) {
+            if (Medewerker.medewerker.get(i).getNaam().equals(naam) && code == Medewerker.medewerker.get(i).getCode()) {
                 check = true;
                 time2 = LocalTime.now();
                 System.out.println(time2);
                 Long Tijdverschil = VerschilTijd() / 3600;
-                i.setTijdSeconde(Tijdverschil);
+                Medewerker.medewerker.get(i).setTijdSeconde(Tijdverschil);
                 System.out.println("U dienst is beeindigd een fijne dag verder " + "Je hebt ongeveer " + Tijdverschil + " uurtjes gewerkt");
                 Menu.getInstance().menu();
 

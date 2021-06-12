@@ -45,7 +45,6 @@ public class Inloggen extends UrenRegistratie {
         Gegevens gegevens = new Gegevens(8927292, 1265252);
         Werkkracht werknemer = new Werkkracht("Lisa", 9087, 15.50, gegevens);
         System.out.println("Naam werknemer");
-        scanner.nextLine();
         String naam = scanner.nextLine();
         System.out.println("Code werknemer");
         int code = scanner.nextInt();

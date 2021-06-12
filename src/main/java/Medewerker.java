@@ -24,7 +24,8 @@ public class Medewerker extends Werkkracht {
                 GegevensToevoegen(scanner);
             }
             if(!check){
-                System.out.println("Sorry je staat niet in ons systeem. Je wordt doorgestuurd naar de menu");
+                Inloggen inloggen = new Inloggen();
+                inloggen.Nietgelijkaan();
             }
         }
     }

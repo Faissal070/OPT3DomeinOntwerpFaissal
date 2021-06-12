@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Menu {
+public  class Menu {
     Scanner scanner = new Scanner(System.in);
     Salaris oproepen = new Salaris();
     Gegevens gegevens = new Gegevens(922982,2982792);

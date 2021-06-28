@@ -50,7 +50,7 @@ public class Uitloggen {
     public Long VerschilTijd() {
         Inloggen obj = new Inloggen();
         long minutesBetween = ChronoUnit.SECONDS.between(Inloggen.getTime(), time2);
-        System.out.println("Diffrence between time in munutes : " + minutesBetween);
+        System.out.println(" Je Tijd in secondes : " + minutesBetween);
 
 
         return minutesBetween;

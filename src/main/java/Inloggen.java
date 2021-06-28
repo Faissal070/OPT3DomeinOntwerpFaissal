@@ -11,7 +11,12 @@ public class Inloggen extends UrenRegistratie {
     }
 
     @Override
-    public LocalTime Kloksysteem(String naam, int code) {
+    public LocalTime Kloksysteem() {
+        System.out.println("Naam werknemer");
+        scanner.nextLine();
+        String naam = scanner.nextLine();
+        System.out.println("Code werknemer");
+        int code = scanner.nextInt();
         boolean check = false;
         for (int i = 0; i<Medewerker.medewerker.size(); i++) {
             if (Medewerker.medewerker.get(i).getNaam().equals(naam) && code == Medewerker.medewerker.get(i).getCode()) {
@@ -29,26 +34,7 @@ public class Inloggen extends UrenRegistratie {
 
         }
         return time;
-    }
 
-    public void checkwerknemerVoorSalaris() {
-        Gegevens gegevens = new Gegevens(78939390, 838383);
-        Werkkracht werknemer3 = new Werkkracht("Fais", 9833, 9.30, gegevens);
-        System.out.println("Goedendag, wat is je naam werknemer");
-        scanner.nextLine();
-        String naamwerknemer2 = scanner.nextLine();
-        System.out.println("Voer je code in");
-        int codewerknemer2 = scanner.nextInt();
-        Salaris.BerekenSalaris(naamwerknemer2, codewerknemer2);
-    }
-    public void checkWerknemerInklokken(){
-        Gegevens gegevens = new Gegevens(8927292, 1265252);
-        Werkkracht werknemer = new Werkkracht("Lisa", 9087, 15.50, gegevens);
-        System.out.println("Naam werknemer");
-        String naam = scanner.nextLine();
-        System.out.println("Code werknemer");
-        int code = scanner.nextInt();
-        Kloksysteem(naam,code);
 
     }
     public void Nietgelijkaan(){

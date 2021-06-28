@@ -4,7 +4,7 @@ abstract class UrenRegistratie {
     private LocalTime time;
     private LocalTime time2;
 
-   public abstract LocalTime Kloksysteem(String naam,int code);
+   public abstract LocalTime Kloksysteem();
 
 
 }

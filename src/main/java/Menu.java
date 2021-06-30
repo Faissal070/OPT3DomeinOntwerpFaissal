@@ -3,8 +3,8 @@ import java.util.Scanner;
 public class Menu {
     Scanner scanner = new Scanner(System.in);
     MedewerkerToevoegen werkgever = new MedewerkerToevoegen();
-    Uitloggen uitloggen;
-    Inloggen inloggen;
+    Uitloggen uitloggen = new Uitloggen();
+    Inloggen inloggen = new Inloggen();
 
     private static Menu instance = new Menu();
 

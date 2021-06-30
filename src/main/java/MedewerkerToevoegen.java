@@ -5,10 +5,10 @@ public class MedewerkerToevoegen {
     Medewerker medewerker;
     Scanner scanner = new Scanner(System.in);
 
-    public void GegevensToevoegen(String naam, int code) {
+    public void GegevensToevoegen(String naamwerkner, int codewerknemer) {
         boolean check = false;
         for (int i = 0; i < Werkgever.werkgevers.size(); i++) {
-            if (Werkgever.werkgevers.get(i).getNaam().equals(naam) && code == Werkgever.werkgevers.get(i).getCode()) {
+            if (Werkgever.werkgevers.get(i).getNaam().equals(naamwerkner) && codewerknemer == Werkgever.werkgevers.get(i).getCode()) {
                 check = true;
                 System.out.println("Welkom");
                 System.out.println("Wat is de naam van de nieuwe werknemer\r\n");

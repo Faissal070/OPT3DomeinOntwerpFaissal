@@ -1,12 +1,10 @@
 import java.util.Scanner;
 
-public  class Menu {
+public class Menu {
     Scanner scanner = new Scanner(System.in);
-    Salaris oproepen = new Salaris();
-    Gegevens gegevens = new Gegevens(922982, 2982792);
-    Medewerker oproepen1 = new Medewerker("Lisa", 8222, 20.50, gegevens);
-    Uitloggen oproepen2 = new Uitloggen();
-    Inloggen oproepen3 = new Inloggen();
+    MedewerkerToevoegen werkgever = new MedewerkerToevoegen();
+    Uitloggen uitloggen;
+    Inloggen inloggen;
 
     private static Menu instance = new Menu();
 
@@ -25,14 +23,14 @@ public  class Menu {
         while (antwoord != 5) {
             switch (antwoord) {
                 case 1:
-                    oproepen3.Kloksysteem();
+                    inloggen.Kloksysteem();
 
                 case 2:
-                    oproepen2.checkWerknemerUitklokken();
+                    uitloggen.Kloksysteem();
                 case 3:
-                    InloggenWerkgever();
+                    werkgever.InloggenWerkgever();
                 case 4:
-                    oproepen.checkwerknemerVoorSalaris();
+                    inloggen.InloggenSalaris();
             }
         }
     }
@@ -46,31 +44,4 @@ public  class Menu {
         System.out.println("(4). Salaris overzicht");
     }
 
-    public void GegevensToevoegen(String naam, int code) {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Welkom");
-        System.out.println("Wat is de naam van de nieuwe werknemer\r\n");
-        String naam1 = scanner.nextLine();
-        System.out.println("Voer zijn/haar bsn in");
-        int bsn = scanner.nextInt();
-        System.out.println("Wat is zijn/haar uurloon?");
-        double uurloon = scanner.nextDouble();
-        System.out.println("Voer zijn/haar telefoonnummer in");
-        int telefoonnummer = scanner.nextInt();
-        Gegevens gegevens = new Gegevens(bsn, telefoonnummer);
-        Medewerker nieuweMedewerker = new Medewerker(naam1,oproepen1.getNewCode(), uurloon, gegevens);
-        Medewerker.medewerker.add(new Medewerker(naam1, oproepen1.getNewCode(), uurloon, gegevens));
-        System.out.println("Medewerker succesvol toegevoegd " + nieuweMedewerker);
-        Menu.getInstance().menu();
-    }
-
-    public void InloggenWerkgever() {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Goedendag, wat is u naam (Werkgever) ?");
-        String naamwerkgever = scanner.nextLine();
-        System.out.println("Voer u viercijferige code in");
-        int codewerkgever = scanner.nextInt();
-        GegevensToevoegen(naamwerkgever, codewerkgever);
-
-    }
 }

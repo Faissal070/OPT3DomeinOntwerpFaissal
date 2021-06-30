@@ -4,11 +4,16 @@ import java.time.format.DateTimeFormatter;
 import java.time.temporal.ChronoUnit;
 import java.util.Scanner;
 
-public class Uitloggen {
+public class Uitloggen extends UrenRegistratie {
     private LocalTime time2;
 
 
-    public LocalTime Kloksysteem(String naam, int code) {
+    public LocalTime Kloksysteem() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Wat is je naam");
+        String naam = scanner.nextLine();
+        System.out.println("Wat is je code?");
+        int code = scanner.nextInt();
         boolean check = false;
         for (int i = 0; i<Medewerker.medewerker.size(); i++) {
             if (Medewerker.medewerker.get(i).getNaam().equals(naam) && code == Medewerker.medewerker.get(i).getCode()) {
@@ -25,24 +30,17 @@ public class Uitloggen {
 
         }
         if (!check) {
-           Inloggen inloggen = new Inloggen();
-           inloggen.Nietgelijkaan();
+            FoutGegevens();
+
+
 
 
         }
         return time2;
     }
-    public void checkWerknemerUitklokken(){
-        Scanner scanner = new Scanner(System.in);
-        Salaris obj = new Salaris();
-        Gegevens gegevens = new Gegevens(922220,9276227);
-        Medewerker medewerker = new Medewerker("Lisa", 8765, 10.50, gegevens);
-        System.out.println("Wat is je naam");
-        String naam = scanner.nextLine();
-        System.out.println("Wat is je code?");
-        int code = scanner.nextInt();
-        Kloksysteem(naam,code);
-    }
+
+
+
 
 
 

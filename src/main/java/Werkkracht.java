@@ -33,7 +33,7 @@ public class Werkkracht {
     public static Double getUurloon(){
         return uurloon;
     }
-    public Integer getNewCode() {
+    public static Integer getNewCode() {
         newCode += 89;
         return newCode;
     }

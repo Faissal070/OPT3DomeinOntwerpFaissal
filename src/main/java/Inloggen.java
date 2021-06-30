@@ -2,7 +2,8 @@ import java.time.LocalTime;
 import java.util.Scanner;
 
 public class Inloggen extends UrenRegistratie {
-    Scanner scanner = new Scanner(System.in);
+    MedewerkerToevoegen medewerkerToevoegen = new MedewerkerToevoegen();
+    Salaris salaris = new Salaris();
     private static LocalTime time;
 
 
@@ -12,14 +13,14 @@ public class Inloggen extends UrenRegistratie {
 
     @Override
     public LocalTime Kloksysteem() {
+        Scanner scanner = new Scanner(System.in);
         System.out.println("Naam werknemer");
-        scanner.nextLine();
         String naam = scanner.nextLine();
         System.out.println("Code werknemer");
         int code = scanner.nextInt();
         boolean check = false;
-        for (int i = 0; i<Medewerker.medewerker.size(); i++) {
-            if (Medewerker.medewerker.get(i).getNaam().equals(naam) && code == Medewerker.medewerker.get(i).getCode()) {
+        for (int i = 0; i < Medewerker.medewerkerList.size(); i++) {
+            if (Medewerker.medewerkerList.get(i).getNaam().equals(naam) && code == Medewerker.medewerkerList.get(i).getCode()) {
                 check = true;
                 System.out.println("Je dienst is succesvol gestart. Werkze!");
                 time = LocalTime.now();
@@ -30,16 +31,31 @@ public class Inloggen extends UrenRegistratie {
 
         }
         if (!check) {
-            Nietgelijkaan();
+            FoutGegevens();
 
         }
+
+
         return time;
 
 
     }
-    public void Nietgelijkaan(){
-        System.out.println("Sorry probeer het opnieuw je wordt vanzelf doorgestuurd naar de menu");
-        Menu.getInstance().menu();
 
+    public void InloggenSalaris() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Goedendag, wat is je naam werknemer");
+        String naamwerknemer2 = scanner.nextLine();
+        System.out.println("Voer je code in");
+        int codewerknemer2 = scanner.nextInt();
+        salaris.BerekenSalaris(naamwerknemer2, codewerknemer2);
+    }
+
+    public void InloggenWerkgever() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Goedendag, wat is u naam (Werkgever) ?");
+        String naamwerkgever = scanner.nextLine();
+        System.out.println("Voer u viercijferige code in");
+        int codewerkgever = scanner.nextInt();
+        medewerkerToevoegen.GegevensToevoegen(naamwerkgever, codewerkgever);
     }
 }

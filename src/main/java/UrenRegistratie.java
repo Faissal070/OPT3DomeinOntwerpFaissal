@@ -1,10 +1,18 @@
 import java.time.LocalTime;
+import java.util.Scanner;
 
 abstract class UrenRegistratie {
-    private LocalTime time;
-    private LocalTime time2;
 
-   public abstract LocalTime Kloksysteem();
+    public abstract LocalTime Kloksysteem();
 
 
+    public static void FoutGegevens() {
+        System.out.println("Sorry probeer het opnieuw je wordt vanzelf doorgestuurd naar de menu");
+        Menu.getInstance().menu();
+    }
 }
+
+
+
+
+

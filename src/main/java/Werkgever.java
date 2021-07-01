@@ -6,14 +6,17 @@ public class Werkgever extends Werkkracht {
 
     public static ArrayList<Werkkracht> werkgevers = new ArrayList<>();
 
-    Werkgever(String naam, Integer code, Double uurloon, Gegevens gegevens) {
-        super(naam, code, uurloon, gegevens);
+    Werkgever(){
+        super();
+    }
+
+    Werkgever(String naam, Integer code) {
+        super(naam, code);
     }
 
 
     public void ToevoegingWerkgever() {
-        Gegevens gegevens = new Gegevens(93320, 9827292);
-        Werkkracht werkgever1 = new Werkkracht("Mohamed", 7654, 25.50, gegevens);
+        Werkkracht werkgever1 = new Werkkracht("Mohamed", 7654);
         werkgevers.add(werkgever1);
 
 

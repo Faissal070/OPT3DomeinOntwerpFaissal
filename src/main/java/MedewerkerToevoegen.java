@@ -20,7 +20,9 @@ public class MedewerkerToevoegen {
                 System.out.println("Voer zijn/haar telefoonnummer in");
                 int telefoonnummer = scanner.nextInt();
                 gegevens = new Gegevens(bsn, telefoonnummer);
-                medewerker = new Medewerker(naam1, Medewerker.getNewCode(), uurloon, gegevens);
+                medewerker = new Medewerker(naam1, Medewerker.getNewCode());
+                medewerker.setUurloon(uurloon);
+                medewerker.setGegevens(gegevens);
                 Medewerker.medewerkerList.add(medewerker);
                 System.out.println("Medewerker succesvol toegevoegd " + Medewerker.medewerkerList);
                 Menu.getInstance().menu();

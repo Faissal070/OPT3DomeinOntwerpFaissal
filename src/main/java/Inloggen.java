@@ -8,6 +8,7 @@ public class Inloggen extends UrenRegistratie {
 
 
     public static LocalTime getTime() {
+
         return time;
     }
 

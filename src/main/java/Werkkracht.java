@@ -9,6 +9,10 @@ public class Werkkracht {
     public Long TijdSeconde = Long.valueOf(0);
     Gegevens gegevens;
 
+    Werkkracht(){
+
+    }
+
 
     Werkkracht(String naam, Integer code, Double uurloon, Gegevens gegevens) {
         this.naam = naam;

@@ -29,15 +29,8 @@ public class MedewerkerToevoegen {
                 UrenRegistratie.FoutGegevens();
             }
         }
+
     }
-            public void InloggenWerkgever() {
-                Scanner scanner = new Scanner(System.in);
-                System.out.println("Goedendag, wat is u naam (Werkgever) ?");
-                String naamwerkgever = scanner.nextLine();
-                System.out.println("Voer u viercijferige code in");
-                int codewerkgever = scanner.nextInt();
-                GegevensToevoegen(naamwerkgever,codewerkgever);
-            }
-        }
+}
 
 

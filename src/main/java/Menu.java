@@ -28,7 +28,7 @@ public class Menu {
                 case 2:
                     uitloggen.Kloksysteem();
                 case 3:
-                    werkgever.InloggenWerkgever();
+                    inloggen.InloggenWerkgever();
                 case 4:
                     inloggen.InloggenSalaris();
             }

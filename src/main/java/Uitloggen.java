@@ -45,7 +45,6 @@ public class Uitloggen extends UrenRegistratie {
 
 
     public Long VerschilTijd() {
-        Inloggen obj = new Inloggen();
         long minutesBetween = ChronoUnit.SECONDS.between(Inloggen.getTime(), time2);
         System.out.println(" Je Tijd in secondes : " + minutesBetween);
 

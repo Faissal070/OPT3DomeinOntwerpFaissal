@@ -20,13 +20,10 @@ abstract class UrenRegistratie {
         System.out.println("Voer je code in");
         code = scanner.nextInt();
     }
-    public void Uitloggen(){
-        Inloggen();
-     }
-//    public void InloggenSalaris(){
-//        Inloggen();
-//    }
 
+    public void Uitloggen() {
+        Inloggen();
+    }
 }
 
 

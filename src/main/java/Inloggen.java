@@ -2,7 +2,6 @@ import java.time.LocalTime;
 import java.util.Scanner;
 
 public class Inloggen extends UrenRegistratie {
-    UrenRegistratie urenRegistratie;
     MedewerkerToevoegen medewerkerToevoegen = new MedewerkerToevoegen();
     Salaris salaris = new Salaris();
     private static LocalTime time;

@@ -19,8 +19,8 @@ public class Inloggen extends UrenRegistratie {
         System.out.println("Code werknemer");
         int code = scanner.nextInt();
         boolean check = false;
-        for (int i = 0; i < Medewerker.medewerkerList.size(); i++) {
-            if (Medewerker.medewerkerList.get(i).getNaam().equals(naam) && code == Medewerker.medewerkerList.get(i).getCode()) {
+        for (int i = 0; i < Medewerker.medewerker.size(); i++) {
+            if (Medewerker.medewerker.get(i).getNaam().equals(naam) && code == Medewerker.medewerker.get(i).getCode()) {
                 check = true;
                 System.out.println("Je dienst is succesvol gestart. Werkze!");
                 time = LocalTime.now();

@@ -2,6 +2,7 @@ import java.time.LocalTime;
 import java.util.Scanner;
 
 public class Inloggen extends UrenRegistratie {
+    UrenRegistratie urenRegistratie;
     MedewerkerToevoegen medewerkerToevoegen = new MedewerkerToevoegen();
     Salaris salaris = new Salaris();
     private static LocalTime time;
@@ -12,12 +13,7 @@ public class Inloggen extends UrenRegistratie {
     }
 
     @Override
-    public LocalTime Kloksysteem() {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Naam werknemer");
-        String naam = scanner.nextLine();
-        System.out.println("Code werknemer");
-        int code = scanner.nextInt();
+    public LocalTime Kloksysteem(String naam, int code) {
         boolean check = false;
         for (int i = 0; i < Medewerker.medewerkerList.size(); i++) {
             if (Medewerker.medewerkerList.get(i).getNaam().equals(naam) && code == Medewerker.medewerkerList.get(i).getCode()) {
@@ -39,23 +35,19 @@ public class Inloggen extends UrenRegistratie {
         return time;
 
 
+
+
     }
 
-    public void InloggenSalaris() {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Goedendag, wat is je naam werknemer");
-        String naamwerknemer2 = scanner.nextLine();
-        System.out.println("Voer je code in");
-        int codewerknemer2 = scanner.nextInt();
-        salaris.BerekenSalaris(naamwerknemer2, codewerknemer2);
+    @Override
+    public void Inloggen() {
+        super.Inloggen();
+        Kloksysteem(super.naam,super.code);
+    }
+    public void InloggenSalaris(){
+        super.Inloggen();
+        salaris.BerekenSalaris(super.naam, super.code);
+
     }
 
-    public void InloggenWerkgever() {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Goedendag, wat is u naam (Werkgever) ?");
-        String naamwerkgever = scanner.nextLine();
-        System.out.println("Voer u viercijferige code in");
-        int codewerkgever = scanner.nextInt();
-        medewerkerToevoegen.GegevensToevoegen(naamwerkgever, codewerkgever);
-    }
 }

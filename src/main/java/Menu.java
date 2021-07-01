@@ -23,14 +23,15 @@ public class Menu {
         while (antwoord != 5) {
             switch (antwoord) {
                 case 1:
-                    inloggen.Kloksysteem();
+                    inloggen.Inloggen();
 
                 case 2:
-                    uitloggen.Kloksysteem();
+                    uitloggen.Uitloggen();
                 case 3:
-                    inloggen.InloggenWerkgever();
+                    werkgever.WerkgeverInloggen();
                 case 4:
                     inloggen.InloggenSalaris();
+
             }
         }
     }

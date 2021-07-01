@@ -31,6 +31,14 @@ public class MedewerkerToevoegen {
         }
 
     }
+    public void WerkgeverInloggen(){
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Naam");
+        String naam = scanner.nextLine();
+        System.out.println("Code");
+        int code = scanner.nextInt();
+        GegevensToevoegen(naam,code);
+    }
 }
 
 

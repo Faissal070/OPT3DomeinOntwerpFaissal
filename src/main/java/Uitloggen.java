@@ -4,13 +4,13 @@ import java.time.temporal.ChronoUnit;
 public class Uitloggen extends UrenRegistratie {
     private static LocalTime time2;
 
-    public static LocalTime getTime2(){
+    public static LocalTime getTime2() {
         return time2;
     }
 
     public LocalTime Kloksysteem(String naam, int code) {
         boolean check = false;
-        for (int i = 0; i<Medewerker.medewerkerList.size(); i++) {
+        for (int i = 0; i < Medewerker.medewerkerList.size(); i++) {
             if (Medewerker.medewerkerList.get(i).getNaam().equals(naam) && code == Medewerker.medewerkerList.get(i).getCode()) {
                 check = true;
                 time2 = LocalTime.now();
@@ -28,28 +28,16 @@ public class Uitloggen extends UrenRegistratie {
             FoutGegevens();
 
 
-
-
         }
         return time2;
     }
 
 
-
-
     @Override
     public void UitloggenKloksysteem() {
         super.UitloggenKloksysteem();
-        Kloksysteem(super.naam,super.code);
+        Kloksysteem(super.naam, super.code);
     }
 
-
-//    public Long VerschilTijd() {
-//        long minutesBetween = ChronoUnit.SECONDS.between(Inloggen.getTime(), time2);
-//        System.out.println(" Je Tijd in secondes : " + minutesBetween);
-//
-//
-//        return minutesBetween;
-//    }
 
 }

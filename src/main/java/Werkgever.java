@@ -1,10 +1,9 @@
 import java.util.ArrayList;
-import java.util.Scanner;
 
 public class Werkgever extends Werkkracht {
 
 
-    public static ArrayList<Werkkracht> werkgevers = new ArrayList<>();
+    public static ArrayList<Werkkracht> werkgeversList = new ArrayList<>();
 
     Werkgever(){
         super();
@@ -17,7 +16,7 @@ public class Werkgever extends Werkkracht {
 
     public void ToevoegingWerkgever() {
         Werkkracht werkgever1 = new Werkkracht("Mohamed", 7654);
-        werkgevers.add(werkgever1);
+        werkgeversList.add(werkgever1);
 
 
     }

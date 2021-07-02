@@ -1,14 +1,15 @@
 import java.util.Scanner;
 
 public class MedewerkerToevoegen {
+    Werkgever werkgever;
     Gegevens gegevens;
     Medewerker medewerker;
     Scanner scanner = new Scanner(System.in);
 
     public void GegevensToevoegen(String naamwerkner, int codewerknemer) {
         boolean check = false;
-        for (int i = 0; i < Werkgever.werkgevers.size(); i++) {
-            if (Werkgever.werkgevers.get(i).getNaam().equals(naamwerkner) && codewerknemer == Werkgever.werkgevers.get(i).getCode()) {
+        for (int i = 0; i < werkgever.werkgeversList.size(); i++) {
+            if (werkgever.werkgeversList.get(i).getNaam().equals(naamwerkner) && codewerknemer == werkgever.werkgeversList.get(i).getCode()) {
                 check = true;
                 System.out.println("Welkom");
                 System.out.println("Wat is de naam van de nieuwe werknemer\r\n");
@@ -24,7 +25,7 @@ public class MedewerkerToevoegen {
                 medewerker.setUurloon(uurloon);
                 medewerker.setGegevens(gegevens);
                 Medewerker.medewerkerList.add(medewerker);
-                System.out.println("Medewerker succesvol toegevoegd " + Medewerker.medewerkerList);
+                System.out.println("Medewerker succesvol toegevoegd " + medewerker.medewerkerList);
                 Menu.getInstance().menu();
             }
             if (!check) {
@@ -33,14 +34,4 @@ public class MedewerkerToevoegen {
         }
 
     }
-    public void WerkgeverInloggen(){
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Naam");
-        String naam = scanner.nextLine();
-        System.out.println("Code");
-        int code = scanner.nextInt();
-        GegevensToevoegen(naam,code);
-    }
 }
-
-

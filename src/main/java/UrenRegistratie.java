@@ -13,16 +13,16 @@ abstract class UrenRegistratie {
         Menu.getInstance().menu();
     }
 
-    public void Inloggen() {
+    public void InloggenKloksysteem() {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Goedendag, wat is je naam werknemer");
+        System.out.println("Goedendag, wat is je naam (Medewerker)");
         naam = scanner.nextLine();
-        System.out.println("Voer je code in");
+        System.out.println("Voer je code in (Medewerker)");
         code = scanner.nextInt();
     }
 
-    public void Uitloggen() {
-        Inloggen();
+    public void UitloggenKloksysteem() {
+        InloggenKloksysteem();
     }
 }
 

@@ -4,20 +4,18 @@ import java.util.Scanner;
 public class Werkkracht {
     private String naam;
     private Integer code;
-
-    public void setUurloon(Double uurloon) {
-        Werkkracht.uurloon = uurloon;
-    }
-
-    private static Double uurloon;
+    private  Double uurloon;
     private static Integer newCode = 1999;
     public Long TijdSeconde = Long.valueOf(0);
+    Gegevens gegevens;
 
     public void setGegevens(Gegevens gegevens) {
         this.gegevens = gegevens;
     }
 
-    Gegevens gegevens;
+    public void setUurloon(Double uurloon){
+        this.uurloon = uurloon;
+    }
 
     Werkkracht(){
 
@@ -42,7 +40,7 @@ public class Werkkracht {
         return naam + " " + code;
     }
 
-    public static Double getUurloon(){
+    public  Double getUurloon(){
         return uurloon;
     }
     public static Integer getNewCode() {

@@ -40,14 +40,23 @@ public class Inloggen extends UrenRegistratie {
     }
 
     @Override
-    public void Inloggen() {
-        super.Inloggen();
+    public void InloggenKloksysteem() {
+        super.InloggenKloksysteem();
         Kloksysteem(super.naam,super.code);
     }
     public void InloggenSalaris(){
-        super.Inloggen();
+        super.InloggenKloksysteem();
         salaris.BerekenSalaris(super.naam, super.code);
 
     }
-
+    public void WerkgeverInloggen(){
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Goedendag mag ik u naam (Werkgever)");
+        String naam = scanner.nextLine();
+        System.out.println("Mag ik u code (Werkgever)");
+        int code = scanner.nextInt();
+        medewerkerToevoegen.GegevensToevoegen(naam,code);
+    }
 }
+
+

@@ -1,8 +1,5 @@
-import java.text.DecimalFormat;
 import java.time.LocalTime;
-import java.time.format.DateTimeFormatter;
 import java.time.temporal.ChronoUnit;
-import java.util.Scanner;
 
 public class Uitloggen extends UrenRegistratie {
     private LocalTime time2;
@@ -38,8 +35,8 @@ public class Uitloggen extends UrenRegistratie {
 
 
     @Override
-    public void Uitloggen() {
-        super.Uitloggen();
+    public void UitloggenKloksysteem() {
+        super.UitloggenKloksysteem();
         Kloksysteem(super.naam,super.code);
     }
 

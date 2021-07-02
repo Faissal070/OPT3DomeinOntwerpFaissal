@@ -2,7 +2,6 @@ import java.util.Scanner;
 
 public class Menu {
     Scanner scanner = new Scanner(System.in);
-    MedewerkerToevoegen werkgever = new MedewerkerToevoegen();
     Uitloggen uitloggen = new Uitloggen();
     Inloggen inloggen = new Inloggen();
 
@@ -23,12 +22,12 @@ public class Menu {
         while (antwoord != 5) {
             switch (antwoord) {
                 case 1:
-                    inloggen.Inloggen();
+                    inloggen.InloggenKloksysteem();
 
                 case 2:
-                    uitloggen.Uitloggen();
+                    uitloggen.UitloggenKloksysteem();
                 case 3:
-                    werkgever.WerkgeverInloggen();
+                    inloggen.WerkgeverInloggen();
                 case 4:
                     inloggen.InloggenSalaris();
 

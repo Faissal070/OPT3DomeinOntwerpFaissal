@@ -2,8 +2,11 @@ import java.time.LocalTime;
 import java.time.temporal.ChronoUnit;
 
 public class Uitloggen extends UrenRegistratie {
-    private LocalTime time2;
+    private static LocalTime time2;
 
+    public static LocalTime getTime2(){
+        return time2;
+    }
 
     public LocalTime Kloksysteem(String naam, int code) {
         boolean check = false;
@@ -41,12 +44,12 @@ public class Uitloggen extends UrenRegistratie {
     }
 
 
-    public Long VerschilTijd() {
-        long minutesBetween = ChronoUnit.SECONDS.between(Inloggen.getTime(), time2);
-        System.out.println(" Je Tijd in secondes : " + minutesBetween);
-
-
-        return minutesBetween;
-    }
+//    public Long VerschilTijd() {
+//        long minutesBetween = ChronoUnit.SECONDS.between(Inloggen.getTime(), time2);
+//        System.out.println(" Je Tijd in secondes : " + minutesBetween);
+//
+//
+//        return minutesBetween;
+//    }
 
 }

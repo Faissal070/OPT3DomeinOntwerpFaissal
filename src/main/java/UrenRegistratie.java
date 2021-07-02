@@ -1,4 +1,5 @@
 import java.time.LocalTime;
+import java.time.temporal.ChronoUnit;
 import java.util.Scanner;
 
 abstract class UrenRegistratie {
@@ -23,6 +24,14 @@ abstract class UrenRegistratie {
 
     public void UitloggenKloksysteem() {
         InloggenKloksysteem();
+    }
+
+    public Long VerschilTijd() {
+        long minutesBetween = ChronoUnit.SECONDS.between(Inloggen.getTime(), Uitloggen.getTime2());
+        System.out.println(" Je Tijd in secondes : " + minutesBetween);
+
+
+        return minutesBetween;
     }
 }
 

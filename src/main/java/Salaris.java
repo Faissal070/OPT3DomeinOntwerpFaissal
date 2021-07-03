@@ -23,7 +23,7 @@ public class Salaris {
             if (medewerker.medewerkerList.get(i).getNaam().equals(naam) && code == medewerker.medewerkerList.get(i).getCode()) {
                 check = true;
                 System.out.println("Welkom");
-                Double berekeningSalaris = (medewerker.medewerkerList.get(i).getTijdSeconde() * medewerker.medewerkerList.get(i).getUurloon()) * belastingLoon * Toeslag;
+                Double berekeningSalaris = (medewerker.medewerkerList.get(i).getTijdSeconde() * medewerker.medewerkerList.get(i).getUurloon()) * getBelastingLoon() * getToeslag();
                 DecimalFormat df = new DecimalFormat("#.##");
                 System.out.println("Jouw netto salaris tot nu toe bedraagt " + df.format(berekeningSalaris) + " euro");
                 Menu.getInstance().menu();

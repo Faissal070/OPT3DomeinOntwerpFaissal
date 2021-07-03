@@ -14,7 +14,7 @@ public class Werkgever extends Werkkracht {
     }
 
 
-    public void ToevoegingWerkgever() {
+    public void ToevoegenWerkgever() {
         Werkkracht werkgever1 = new Werkkracht("Mohamed", 7654);
         werkgeversList.add(werkgever1);
 

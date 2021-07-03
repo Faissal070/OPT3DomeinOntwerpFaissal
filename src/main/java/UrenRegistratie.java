@@ -1,3 +1,4 @@
+import java.text.DecimalFormat;
 import java.time.LocalTime;
 import java.time.temporal.ChronoUnit;
 import java.util.Scanner;
@@ -27,6 +28,7 @@ abstract class UrenRegistratie {
     }
 
     public Long VerschilTijd() {
+        DecimalFormat df = new DecimalFormat("#.##");
         long minutesBetween = ChronoUnit.SECONDS.between(Inloggen.getTime(), Uitloggen.getTime2());
         System.out.println(" Je Tijd in secondes : " + minutesBetween);
 

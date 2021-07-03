@@ -1,3 +1,4 @@
+import java.text.DecimalFormat;
 import java.time.LocalTime;
 import java.time.temporal.ChronoUnit;
 
@@ -17,7 +18,7 @@ public class Uitloggen extends UrenRegistratie {
                 System.out.println(time2);
                 Long Tijdverschil = VerschilTijd() / 3600;
                 Medewerker.medewerkerList.get(i).setTijdSeconde(Tijdverschil);
-                System.out.println("U dienst is beeindigd een fijne dag verder " + "Je hebt ongeveer " + Tijdverschil + " uurtjes gewerkt");
+                System.out.println("U dienst is beeindigd een fijne dag verder " + "Je hebt ongeveer " + (Tijdverschil) + " uurtjes gewerkt");
                 Menu.getInstance().menu();
 
             }
